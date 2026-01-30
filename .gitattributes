@@ -1,2 +1,6 @@
 /mvnw text eol=lf
 *.cmd text eol=crlf
+# Exclude frontend assets from language stats
+*.css linguist-vendored
+
+
