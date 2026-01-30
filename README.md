@@ -26,7 +26,7 @@ This project serves as a **foundational implementation** of real-time messaging 
 
 ## 🖼 Chat Interface
 
-![Chat UI](docs/images/chat-ui.png)
+![Chat UI](src/main/resources/static/Screenshot 2026-01-30 223427.png)
 
 ## 🔔 Join / Leave Notification
 
