@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat App - Spring WebSockets</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/stomp.js/2.3.3/stomp.min.js" integrity="sha512-iKDtgDyTHjAitUDdLljGhenhPwrbBfqTKWO1mkhSFH3A7blITC9MhYon6SjnMhp4o0rADGw9yAC6EW4t5a4K3g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sockjs-client/1.6.1/sockjs.min.js" integrity="sha512-1QvjE7BtotQjkq8PxLeF6P46gEpBRXuskzIVgjFpekzFVF4yjRgrQvTG1MTOJ3yQgvTteKAcO7DSZI92+u/yZw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="script.js" ></script>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1 class="app-title">
+                <span class="icon">💬</span>
+                Chat App
+            </h1>
+            <p class="subtitle">Real-time messaging with Spring WebSockets</p>
+        </header>
+
+        <div class="notification-container">
+            <div id="topNotification" class="notification"></div>
+        </div>
+
+        <div class="main-content">
+            <div class="connection-panel">
+                <div class="input-group">
+                    <label for="sender">Your Name</label>
+                    <input id="sender" placeholder="Enter your name" type="text" class="input-field">
+                </div>
+                <div class="button-group">
+                    <button class="btn btn-primary connect" onclick="createConnection()">
+                        <span class="btn-icon">🔌</span>
+                        Establish Connection
+                    </button>
+                    <button class="btn btn-danger disconnect" onclick="makeDisconnect()">
+                        <span class="btn-icon">🔌</span>
+                        Disconnect
+                    </button>
+                </div>
+            </div>
+
+            <div class="chat-container">
+                <div class="chat-header">
+                    <h2>Messages</h2>
+                </div>
+                <div class="chat-messages" id="chatBox"></div>
+                <div class="chat-input-container">
+                    <input id="chatMessage" type="text" placeholder="Type your message..." class="input-field chat-input">
+                    <button class="btn btn-send" onclick="sendMessage()">
+                        <span class="btn-icon">📤</span>
+                        Send
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
