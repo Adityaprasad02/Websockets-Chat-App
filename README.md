@@ -24,6 +24,14 @@ This project serves as a **foundational implementation** of real-time messaging 
 
 ---
 
+## 🖼 Chat Interface
+
+![Chat UI](docs/images/chat-ui.png)
+
+## 🔔 Join / Leave Notification
+
+![User Join](docs/images/join-leave.png)
+
 ## ✨ Features (Current)
 
 - 🔌 **Real-time messaging** using WebSocket + STOMP
